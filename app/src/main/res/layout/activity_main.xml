@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+    <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="159dp"
-        android:layout_height="29dp"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.549" />
 
-    <Button
-        android:id="@+id/btnShowToast"
-        android:layout_width="253dp"
-        android:layout_height="75dp"
-        android:text="Show Toast"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="361dp"
-        tools:layout_editor_absoluteY="528dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/btnShowToast"
+                android:layout_width="143dp"
+                android:layout_height="39dp"
+                android:capitalize="words"
+                android:text="Show Toast"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="158dp" />
+
+            <EditText
+                android:id="@+id/editUserMessage"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:ems="10"
+                android:hint="Enter your message"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="238dp" />
+
+            <Button
+                android:id="@+id/btnSendToNextActivity"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:text="Send Data ot Next Activity"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-143dp"
+                tools:layout_editor_absoluteY="325dp" />
+
+        </LinearLayout>
+    </RelativeLayout>

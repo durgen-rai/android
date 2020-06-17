@@ -1,5 +1,6 @@
 package com.example.durgen
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,15 @@ class MainActivity : AppCompatActivity() {
         btnShowToast.setOnClickListener {
             Log.i("MainActivity","Button was clicked!")
             Toast.makeText(this,"Button was clicked!",Toast.LENGTH_LONG).show();
+        }
+
+        btnSendToNextActivity.setOnClickListener {
+            val message: String = editUserMessage.text.toString()
+            Toast.makeText(this,message,Toast.LENGTH_LONG).show();
+
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+
         }
     }
 }
