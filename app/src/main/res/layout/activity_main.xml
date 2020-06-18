@@ -44,5 +44,17 @@
                 tools:layout_editor_absoluteX="-143dp"
                 tools:layout_editor_absoluteY="325dp" />
 
+            <Button
+                android:id="@+id/btnShareToOtherApps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share to Other Apps" />
+
+            <Button
+                android:id="@+id/btnRecyclerViewDemo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recycler View Demo" />
+
         </LinearLayout>
     </RelativeLayout>

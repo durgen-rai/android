@@ -23,8 +23,22 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,message,Toast.LENGTH_LONG).show();
 
             val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("user_message", message)
             startActivity(intent)
+        }
 
+        btnShareToOtherApps.setOnClickListener {
+            val message: String = editUserMessage.text.toString()
+            val intent = Intent()
+            intent.action =  Intent.ACTION_SEND
+            intent.putExtra(Intent.EXTRA_TEXT,message)
+            intent.type = "text/plain"
+            startActivity(Intent.createChooser(intent, "Share to :"))
+        }
+
+        btnRecyclerViewDemo.setOnClickListener {
+            val intent = Intent(this, HobbiesActivity::class.java)
+            startActivity(intent)
         }
     }
 }
